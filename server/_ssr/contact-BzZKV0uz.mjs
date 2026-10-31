@@ -1,7 +1,7 @@
 import { S as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as SiteShell } from "./chrome-CwvkjpFy.mjs";
-import { t as BriefForm } from "./interactive-D0OSJuEl.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact-CNGWd5Xo.js
+import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
+import { t as BriefForm } from "./interactive-DknaMr9D.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/contact-BzZKV0uz.js
 var import_jsx_runtime = require_jsx_runtime();
 function ContactPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteShell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
@@ -19,7 +19,7 @@ function ContactPage() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 text-muted",
-					children: "Tell us the organization, the sector, and the pain. You get a briefing you can send. This page does not deliver mail on its own — there is no inbox hiding behind the button."
+					children: "Tell us the organization, the sector, and the pain. The brief goes straight to the team, and you get a confirmation by email."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
 					className: "mt-8 space-y-4",

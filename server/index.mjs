@@ -14,13 +14,6 @@ var public_assets_data_default = {
 		"size": 345,
 		"path": "../public/favicon.svg"
 	},
-	"/assets/advisory-C75m_51y.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"c13-B1Sj0eV+teXkgXbH+6MDzZ4Of1A\"",
-		"mtime": "2026-10-31T08:25:50.605Z",
-		"size": 3091,
-		"path": "../public/assets/advisory-C75m_51y.js"
-	},
 	"/og.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"feeb-0JYejM/bL7ctPqVgEZMBcGR2KrI\"",
@@ -28,82 +21,82 @@ var public_assets_data_default = {
 		"size": 65259,
 		"path": "../public/og.jpg"
 	},
-	"/assets/agentic-DrsjBh_M.js": {
+	"/assets/advisory-BtsSQeY_.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"c31-XxauQUjydm77N1kWZQHDsjrzVOQ\"",
-		"mtime": "2026-10-31T08:25:50.605Z",
+		"etag": "\"c13-KUPOisunBUGtT71wUE63SBHNsIM\"",
+		"mtime": "2026-10-31T10:13:36.684Z",
+		"size": 3091,
+		"path": "../public/assets/advisory-BtsSQeY_.js"
+	},
+	"/assets/agentic-BygZrCyD.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"c31-v94PjjjSa22RzPWp5s1FLH09E9g\"",
+		"mtime": "2026-10-31T10:13:36.684Z",
 		"size": 3121,
-		"path": "../public/assets/agentic-DrsjBh_M.js"
+		"path": "../public/assets/agentic-BygZrCyD.js"
 	},
-	"/assets/approach-B8EGMtSJ.js": {
+	"/assets/approach-Dh-B0x8g.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"f54-hJrD0+InDBj+zVjyEmQRWkmo9H0\"",
-		"mtime": "2026-10-31T08:25:50.606Z",
+		"etag": "\"f54-QWSBqxIBIwlePGNFU+5NHBl3Ebo\"",
+		"mtime": "2026-10-31T10:13:36.684Z",
 		"size": 3924,
-		"path": "../public/assets/approach-B8EGMtSJ.js"
+		"path": "../public/assets/approach-Dh-B0x8g.js"
 	},
-	"/assets/contact-CwXW5Frv.js": {
+	"/assets/chrome-78lRalEJ.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"527-/MX6hdzU8tYF8l5miGID6a6wKqM\"",
-		"mtime": "2026-10-31T08:25:50.608Z",
-		"size": 1319,
-		"path": "../public/assets/contact-CwXW5Frv.js"
-	},
-	"/assets/chrome-D1qp166I.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1666-CtXmm2kUDcuzVLlg/HCD5Df50kQ\"",
-		"mtime": "2026-10-31T08:25:50.608Z",
+		"etag": "\"1666-nLxzq3Uk1qG/2ftyFf12thXlA+c\"",
+		"mtime": "2026-10-31T10:13:36.684Z",
 		"size": 5734,
-		"path": "../public/assets/chrome-D1qp166I.js"
+		"path": "../public/assets/chrome-78lRalEJ.js"
 	},
-	"/assets/engineering-DUSz0blB.js": {
+	"/assets/contact-CVhIWPF4.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"95b-WMjd8v5b0IpFQuBuCA8n1rAsoaA\"",
-		"mtime": "2026-10-31T08:25:50.608Z",
+		"etag": "\"4f5-XBPwv6v2EUiAAnWRp8NkwKOjOWM\"",
+		"mtime": "2026-10-31T10:13:36.685Z",
+		"size": 1269,
+		"path": "../public/assets/contact-CVhIWPF4.js"
+	},
+	"/assets/engineering-DZDrYhCb.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"95b-sy6auacZFxjF3/zkIIl+Pe4il8M\"",
+		"mtime": "2026-10-31T10:13:36.685Z",
 		"size": 2395,
-		"path": "../public/assets/engineering-DUSz0blB.js"
+		"path": "../public/assets/engineering-DZDrYhCb.js"
 	},
-	"/assets/routes-DEVmn1SS.js": {
+	"/assets/interactive-BCreldCG.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2140-Ctle05dlWBLeYR766Ic+tk5/E0c\"",
-		"mtime": "2026-10-31T08:25:50.609Z",
-		"size": 8512,
-		"path": "../public/assets/routes-DEVmn1SS.js"
+		"etag": "\"3c7f-7piVI5qua/ywjnJ7eoyNi3J/Q3w\"",
+		"mtime": "2026-10-31T10:13:36.685Z",
+		"size": 15487,
+		"path": "../public/assets/interactive-BCreldCG.js"
 	},
-	"/assets/styles-zif8J1GR.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"8a0b-Q6JKyIeky3ZvOhNW8GEPEGNFzls\"",
-		"mtime": "2026-10-31T08:25:50.609Z",
-		"size": 35339,
-		"path": "../public/assets/styles-zif8J1GR.css"
-	},
-	"/assets/interactive-Blz27RH3.js": {
+	"/assets/routes-B49B8CJS.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2c89-kFxnZ40edEHFFwEoK7WK1wXmp9o\"",
-		"mtime": "2026-10-31T08:25:50.608Z",
-		"size": 11401,
-		"path": "../public/assets/interactive-Blz27RH3.js"
+		"etag": "\"2145-UPJZF5Yy6DZakKu3EkTxHf+j5Ck\"",
+		"mtime": "2026-10-31T10:13:36.685Z",
+		"size": 8517,
+		"path": "../public/assets/routes-B49B8CJS.js"
 	},
-	"/assets/_-CjwsLTZr.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"328-2y4+X/VcE8oz8ohMae1SptnTwIA\"",
-		"mtime": "2026-10-31T08:25:50.605Z",
-		"size": 808,
-		"path": "../public/assets/_-CjwsLTZr.js"
-	},
-	"/assets/index-BFncM_Th.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6f660-rtoPBApJ5R1n6gziUAIvVy3wvxQ\"",
-		"mtime": "2026-10-31T08:25:50.605Z",
-		"size": 456288,
-		"path": "../public/assets/index-BFncM_Th.js"
-	},
-	"/__grok/icon-180.png": {
+	"/brand/lockup.png": {
 		"type": "image/png",
-		"etag": "\"834-Xk8vfS0DTFn7ggtkfEduWTcNWGE\"",
-		"mtime": "2026-10-31T06:16:44.849Z",
-		"size": 2100,
-		"path": "../public/__grok/icon-180.png"
+		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
+		"mtime": "2026-10-31T06:16:44.922Z",
+		"size": 287468,
+		"path": "../public/brand/lockup.png"
+	},
+	"/assets/styles-CETV02uR.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"8a61-XHloDIgs8UKV8G+ICixeYawTvAc\"",
+		"mtime": "2026-10-31T10:13:36.685Z",
+		"size": 35425,
+		"path": "../public/assets/styles-CETV02uR.css"
+	},
+	"/assets/_-CWOktQsI.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"328-JEF3bLIeUK60vyPU0jthxcuZMhc\"",
+		"mtime": "2026-10-31T10:13:36.683Z",
+		"size": 808,
+		"path": "../public/assets/_-CWOktQsI.js"
 	},
 	"/__grok/install/styles.css": {
 		"type": "text/css; charset=utf-8",
@@ -126,12 +119,12 @@ var public_assets_data_default = {
 		"size": 2388,
 		"path": "../public/__grok/install/assets/homescreen/glass-share.svg"
 	},
-	"/brand/lockup.png": {
+	"/__grok/icon-180.png": {
 		"type": "image/png",
-		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
-		"mtime": "2026-10-31T06:16:44.922Z",
-		"size": 287468,
-		"path": "../public/brand/lockup.png"
+		"etag": "\"834-Xk8vfS0DTFn7ggtkfEduWTcNWGE\"",
+		"mtime": "2026-10-31T06:16:44.849Z",
+		"size": 2100,
+		"path": "../public/__grok/icon-180.png"
 	},
 	"/__grok/install/assets/homescreen/logo-grok.svg": {
 		"type": "image/svg+xml",
@@ -160,6 +153,13 @@ var public_assets_data_default = {
 		"mtime": "2026-10-31T06:16:44.909Z",
 		"size": 2401,
 		"path": "../public/__grok/install/assets/homescreen/plus.svg"
+	},
+	"/assets/index-BAOryxiG.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6f6d9-sIYc95KTVmZBn3f6cbcaY64XkNM\"",
+		"mtime": "2026-10-31T10:13:36.683Z",
+		"size": 456409,
+		"path": "../public/assets/index-BAOryxiG.js"
 	},
 	"/__grok/install/assets/homescreen/ob-phone.png": {
 		"type": "image/png",

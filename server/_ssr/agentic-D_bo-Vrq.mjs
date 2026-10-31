@@ -1,8 +1,8 @@
+import { f as trustPoints } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { f as trustPoints } from "./router-CRnRCdkH.mjs";
-import { t as SiteShell } from "./chrome-CwvkjpFy.mjs";
-import { n as CaseBoard, r as Loop } from "./interactive-D0OSJuEl.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/agentic-BCXDxYiU.js
+import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
+import { n as CaseBoard, r as Loop } from "./interactive-DknaMr9D.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/agentic-D_bo-Vrq.js
 var import_jsx_runtime = require_jsx_runtime();
 function AgenticPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [

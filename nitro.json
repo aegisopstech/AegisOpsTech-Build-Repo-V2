@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T08:25:51.448Z",
+  "date": "2026-10-31T10:13:38.894Z",
   "preset": "cloudflare-module",
   "framework": {
     "name": "nitro",
@@ -20,7 +20,8 @@
         "name": "aegisops-web",
         "vars": {
           "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
-          "VITE_GROK_EXTENSIONS": "0"
+          "VITE_GROK_EXTENSIONS": "0",
+          "CONTACT_TO": "no-reply@aegisopstech.me"
         },
         "observability": {
           "enabled": true

@@ -1,10 +1,40 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { J as require_react, S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Check, i as Copy, o as ArrowRight } from "../_libs/lucide-react.mjs";
-import { l as practiceLabels, p as workCases, s as loopSteps, u as sectorOptions } from "./router-CRnRCdkH.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/interactive-D0OSJuEl.js
+import { l as practiceLabels, o as loopSteps, p as workCases, u as sectorOptions } from "./site-B37hbEET.mjs";
+import { S as require_jsx_runtime, Y as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { a as ArrowRight, i as Check } from "../_libs/lucide-react.mjs";
+import { n as TSS_SERVER_FUNCTION, r as getServerFnById, t as createServerFn } from "./ssr.mjs";
+import { a as object, n as email, o as string, t as _enum } from "../_libs/zod.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/interactive-DknaMr9D.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
+var createSsrRpc = (functionId) => {
+	const url = "/_serverFn/" + functionId;
+	const serverFnMeta = { id: functionId };
+	const fn = async (...args) => {
+		return (await getServerFnById(functionId, { origin: "server" }))(...args);
+	};
+	return Object.assign(fn, {
+		url,
+		serverFnMeta,
+		[TSS_SERVER_FUNCTION]: true
+	});
+};
+/** Server-side mirror of the contact form's checks, plus length caps. */
+var briefSchema = object({
+	name: string().trim().min(2).max(120),
+	email: email().trim().max(254),
+	organization: string().trim().min(2).max(160),
+	practice: _enum(Object.keys(practiceLabels)),
+	sector: _enum(sectorOptions),
+	pain: string().trim().min(24).max(5e3),
+	website: string().max(500).optional()
+});
+/**
+* Emails the brief to the team and an acknowledgement to the visitor via
+* Resend. The send logic is imported dynamically so the API key handling
+* never ships in the client bundle.
+*/
+var sendBrief = createServerFn({ method: "POST" }).inputValidator(briefSchema).handler(createSsrRpc("aa8fdfe33933893dd128448d3ecf0226427bc1e9db5e52ff6afb656b137bb648"));
 var STARTS = [
 	{
 		id: "audit",
@@ -274,20 +304,6 @@ var EMPTY = {
 	sector: "",
 	pain: ""
 };
-var STORAGE_KEY = "aegisops.brief";
-function compose(brief) {
-	return [
-		"AegisOps briefing",
-		`Name: ${brief.name}`,
-		`Email: ${brief.email}`,
-		`Organization: ${brief.organization}`,
-		`Practice: ${practiceLabels[brief.practice]}`,
-		`Sector: ${brief.sector}`,
-		"",
-		"The pain:",
-		brief.pain
-	].join("\n");
-}
 function validate(brief) {
 	const errors = {};
 	if (brief.name.trim().length < 2) errors.name = "Give us a name.";
@@ -300,107 +316,77 @@ function validate(brief) {
 function BriefForm() {
 	const [brief, setBrief] = (0, import_react.useState)(EMPTY);
 	const [errors, setErrors] = (0, import_react.useState)({});
-	const [ready, setReady] = (0, import_react.useState)(null);
-	const [copied, setCopied] = (0, import_react.useState)(false);
-	(0, import_react.useEffect)(() => {
-		try {
-			const raw = localStorage.getItem(STORAGE_KEY);
-			if (!raw) return;
-			const parsed = JSON.parse(raw);
-			if (parsed.text) setReady(parsed.text);
-		} catch {}
-	}, []);
+	const [website, setWebsite] = (0, import_react.useState)("");
+	const [status, setStatus] = (0, import_react.useState)("idle");
+	const [sendError, setSendError] = (0, import_react.useState)(null);
+	const [sentTo, setSentTo] = (0, import_react.useState)("");
 	function update(key, value) {
 		setBrief((prev) => ({
 			...prev,
 			[key]: value
 		}));
 	}
-	function onSubmit(event) {
+	async function onSubmit(event) {
 		event.preventDefault();
+		if (status === "sending") return;
 		const next = validate(brief);
 		setErrors(next);
-		if (Object.keys(next).length > 0) return;
-		const text = compose({
-			...brief,
-			name: brief.name.trim(),
-			email: brief.email.trim(),
-			organization: brief.organization.trim(),
-			pain: brief.pain.trim()
-		});
-		setReady(text);
-		setCopied(false);
+		if (Object.keys(next).length > 0 || !brief.sector) return;
+		setStatus("sending");
+		setSendError(null);
 		try {
-			localStorage.setItem(STORAGE_KEY, JSON.stringify({ text }));
-		} catch {}
-	}
-	async function copy() {
-		if (!ready) return;
-		try {
-			await navigator.clipboard.writeText(ready);
-			setCopied(true);
+			const result = await sendBrief({ data: {
+				...brief,
+				sector: brief.sector,
+				website
+			} });
+			if (result.ok) {
+				setSentTo(brief.email.trim());
+				setBrief(EMPTY);
+				setStatus("sent");
+			} else {
+				setSendError(result.error);
+				setStatus("error");
+			}
 		} catch {
-			setCopied(false);
+			setSendError("We could not send your brief. Please check your connection and try again.");
+			setStatus("error");
 		}
 	}
-	function mail() {
-		if (!ready) return;
-		const subject = encodeURIComponent(`AegisOps briefing — ${brief.organization || "conversation"}`);
-		window.location.href = `mailto:?subject=${subject}&body=${encodeURIComponent(ready)}`;
-	}
-	if (ready) return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	if (status === "sent") return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "rounded-card bg-card p-5 shadow-border md:p-7",
 		"aria-live": "polite",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "eyebrow",
-				children: "Briefing composed"
+				children: "Brief sent"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-				className: "mt-3 font-display text-2xl font-semibold",
-				children: "Nothing was sent from this site."
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+				className: "mt-3 flex items-center gap-3 font-display text-2xl font-semibold",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+					"aria-hidden": "true",
+					className: "size-6 text-primary"
+				}), "It is with the team."]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 				className: "mt-3 text-muted",
-				children: "Copy it, or open it in your mail app and address it to your AegisOps contact. It is also saved in this browser."
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("pre", {
-				className: "mt-5 overflow-x-auto rounded-xl bg-paper px-4 py-4 font-sans text-base whitespace-pre-wrap text-ink",
-				children: ready
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-5 flex flex-wrap gap-3",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-						type: "button",
-						className: "btn btn-primary",
-						onClick: copy,
-						children: [copied ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
-							"aria-hidden": "true",
-							className: "size-4"
-						}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, {
-							"aria-hidden": "true",
-							className: "size-4"
-						}), copied ? "Copied" : "Copy briefing"]
+					"A confirmation is on its way to ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-ink",
+						children: sentTo
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						type: "button",
-						className: "btn btn-line",
-						onClick: mail,
-						children: "Open in email"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						type: "button",
-						className: "btn btn-line",
-						onClick: () => {
-							setReady(null);
-							try {
-								localStorage.removeItem(STORAGE_KEY);
-							} catch {}
-						},
-						children: "Start again"
-					})
+					". One of us will reply to that address."
 				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-5",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+					type: "button",
+					className: "btn btn-line",
+					onClick: () => setStatus("idle"),
+					children: "Send another brief"
+				})
 			})
 		]
 	});
@@ -408,107 +394,127 @@ function BriefForm() {
 		className: "rounded-card bg-card p-5 shadow-border md:p-7",
 		onSubmit,
 		noValidate: true,
-		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "grid gap-5 md:grid-cols-2",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
-					label: "Name",
-					error: errors.name,
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-						name: "name",
-						autoComplete: "name",
-						value: brief.name,
-						onChange: (event) => update("name", event.target.value)
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
-					label: "Work email",
-					error: errors.email,
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-						name: "email",
-						type: "email",
-						autoComplete: "email",
-						inputMode: "email",
-						value: brief.email,
-						onChange: (event) => update("email", event.target.value)
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
-					label: "Organization",
-					error: errors.organization,
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-						name: "organization",
-						autoComplete: "organization",
-						value: brief.organization,
-						onChange: (event) => update("organization", event.target.value)
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
-					label: "Sector",
-					error: errors.sector,
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
-						name: "sector",
-						value: brief.sector,
-						onChange: (event) => update("sector", event.target.value),
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
-							value: "",
-							children: "Select"
-						}), sectorOptions.map((option) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
-							value: option,
-							children: option
-						}, option))]
-					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "md:col-span-2",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("fieldset", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("legend", {
-						className: "field-label",
-						children: "Where should we start?"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-3 grid gap-2 sm:grid-cols-2",
-						children: Object.keys(practiceLabels).map((key) => {
-							const on = brief.practice === key;
-							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-								className: "flex min-h-11 cursor-pointer items-center gap-3 rounded-xl px-3 py-2 " + (on ? "bg-navy text-paper" : "bg-paper text-ink"),
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-									type: "radio",
-									name: "practice",
-									className: "size-4 accent-primary",
-									checked: on,
-									onChange: () => update("practice", key)
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "font-display text-sm font-semibold",
-									children: practiceLabels[key]
-								})]
-							}, key);
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "grid gap-5 md:grid-cols-2",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
+						label: "Name",
+						error: errors.name,
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+							name: "name",
+							autoComplete: "name",
+							value: brief.name,
+							onChange: (event) => update("name", event.target.value)
 						})
-					})] })
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "md:col-span-2",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
-						label: "What is actually hurting?",
-						error: errors.pain,
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
-							name: "pain",
-							value: brief.pain,
-							onChange: (event) => update("pain", event.target.value),
-							placeholder: "The queue, the finding, the system, or the drill that has never been run."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
+						label: "Work email",
+						error: errors.email,
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+							name: "email",
+							type: "email",
+							autoComplete: "email",
+							inputMode: "email",
+							value: brief.email,
+							onChange: (event) => update("email", event.target.value)
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
+						label: "Organization",
+						error: errors.organization,
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+							name: "organization",
+							autoComplete: "organization",
+							value: brief.organization,
+							onChange: (event) => update("organization", event.target.value)
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
+						label: "Sector",
+						error: errors.sector,
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
+							name: "sector",
+							value: brief.sector,
+							onChange: (event) => update("sector", event.target.value),
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: "",
+								children: "Select"
+							}), sectorOptions.map((option) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: option,
+								children: option
+							}, option))]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "md:col-span-2",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("fieldset", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("legend", {
+							className: "field-label",
+							children: "Where should we start?"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mt-3 grid gap-2 sm:grid-cols-2",
+							children: Object.keys(practiceLabels).map((key) => {
+								const on = brief.practice === key;
+								return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+									className: "flex min-h-11 cursor-pointer items-center gap-3 rounded-xl px-3 py-2 " + (on ? "bg-navy text-paper" : "bg-paper text-ink"),
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+										type: "radio",
+										name: "practice",
+										className: "size-4 accent-primary",
+										checked: on,
+										onChange: () => update("practice", key)
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-display text-sm font-semibold",
+										children: practiceLabels[key]
+									})]
+								}, key);
+							})
+						})] })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "md:col-span-2",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Field, {
+							label: "What is actually hurting?",
+							error: errors.pain,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
+								name: "pain",
+								value: brief.pain,
+								onChange: (event) => update("pain", event.target.value),
+								placeholder: "The queue, the finding, the system, or the drill that has never been run."
+							})
 						})
 					})
-				})
-			]
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mt-6 flex flex-wrap items-center gap-4",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-				type: "submit",
-				className: "btn btn-primary",
-				children: "Compose briefing"
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "text-sm text-muted",
-				children: "We do not pretend this form delivers mail. You send it."
-			})]
-		})]
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				"aria-hidden": "true",
+				className: "absolute -left-[9999px] h-px w-px overflow-hidden",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", { children: ["Website", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+					name: "website",
+					tabIndex: -1,
+					autoComplete: "off",
+					value: website,
+					onChange: (event) => setWebsite(event.target.value)
+				})] })
+			}),
+			status === "error" && sendError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				role: "alert",
+				className: "field-error mt-6",
+				children: sendError
+			}) : null,
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-6 flex flex-wrap items-center gap-4",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+					type: "submit",
+					className: "btn btn-primary",
+					disabled: status === "sending",
+					children: status === "sending" ? "Sending…" : "Send brief"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-sm text-muted",
+					children: "It goes straight to the team. You get a confirmation by email."
+				})]
+			})
+		]
 	});
 }
 function Field({ label, error, children }) {

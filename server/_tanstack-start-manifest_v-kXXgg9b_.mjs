@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DWssnWOW.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-kXXgg9b_.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/__root.tsx",
@@ -11,59 +11,59 @@ var tsrStartManifest = () => ({ routes: {
 			"/contact",
 			"/engineering"
 		],
-		preloads: ["/assets/index-BFncM_Th.js"],
+		preloads: ["/assets/index-BAOryxiG.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-BFncM_Th.js"
+			src: "/assets/index-BAOryxiG.js"
 		} }]
 	},
 	"/": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-DEVmn1SS.js",
-			"/assets/chrome-D1qp166I.js",
-			"/assets/interactive-Blz27RH3.js"
+			"/assets/routes-B49B8CJS.js",
+			"/assets/interactive-BCreldCG.js",
+			"/assets/chrome-78lRalEJ.js"
 		]
 	},
 	"/$": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/$.tsx",
 		children: void 0,
-		preloads: ["/assets/_-CjwsLTZr.js", "/assets/chrome-D1qp166I.js"]
+		preloads: ["/assets/_-CWOktQsI.js", "/assets/chrome-78lRalEJ.js"]
 	},
 	"/advisory": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/advisory.tsx",
 		children: void 0,
-		preloads: ["/assets/advisory-C75m_51y.js", "/assets/chrome-D1qp166I.js"]
+		preloads: ["/assets/advisory-BtsSQeY_.js", "/assets/chrome-78lRalEJ.js"]
 	},
 	"/agentic": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/agentic.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/agentic-DrsjBh_M.js",
-			"/assets/chrome-D1qp166I.js",
-			"/assets/interactive-Blz27RH3.js"
+			"/assets/agentic-BygZrCyD.js",
+			"/assets/interactive-BCreldCG.js",
+			"/assets/chrome-78lRalEJ.js"
 		]
 	},
 	"/approach": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/approach.tsx",
 		children: void 0,
-		preloads: ["/assets/approach-B8EGMtSJ.js", "/assets/chrome-D1qp166I.js"]
+		preloads: ["/assets/approach-Dh-B0x8g.js", "/assets/chrome-78lRalEJ.js"]
 	},
 	"/contact": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/contact.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/contact-CwXW5Frv.js",
-			"/assets/chrome-D1qp166I.js",
-			"/assets/interactive-Blz27RH3.js"
+			"/assets/contact-CVhIWPF4.js",
+			"/assets/interactive-BCreldCG.js",
+			"/assets/chrome-78lRalEJ.js"
 		]
 	},
 	"/engineering": {
 		filePath: "D:/Data/Documents/AegisOps Technologies/Prototype Projects/AegisOpsTech-MainV2/AegisOpsTech-Code-Repo-V2/src/routes/engineering.tsx",
 		children: void 0,
-		preloads: ["/assets/engineering-DUSz0blB.js", "/assets/chrome-D1qp166I.js"]
+		preloads: ["/assets/engineering-DZDrYhCb.js", "/assets/chrome-78lRalEJ.js"]
 	}
 } });
 //#endregion

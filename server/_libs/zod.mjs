@@ -984,7 +984,7 @@ var uuid = (version) => {
 	return new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${version}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`);
 };
 /** Practical email validation */
-var email = /^(?:[A-Za-z0-9_'+\-]+\.)*[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
+var email$1 = /^(?:[A-Za-z0-9_'+\-]+\.)*[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
 var _emoji$1 = `^(?=[\\s\\S]*[\\p{Extended_Pictographic}\\p{Regional_Indicator}\\u20E3])[\\p{Extended_Pictographic}\\p{Emoji_Component}]+$`;
 function emoji() {
 	return new RegExp(_emoji$1, "u");
@@ -1521,7 +1521,7 @@ var $ZodUUID = /*@__PURE__*/ $constructor("$ZodUUID", (inst, def) => {
 	$ZodStringFormat.init(inst, def);
 });
 var $ZodEmail = /*@__PURE__*/ $constructor("$ZodEmail", (inst, def) => {
-	def.pattern ?? (def.pattern = email);
+	def.pattern ?? (def.pattern = email$1);
 	$ZodStringFormat.init(inst, def);
 });
 function canParseURL(input) {
@@ -4709,6 +4709,9 @@ var ZodEmail = /*@__PURE__*/ $constructor("ZodEmail", (inst, def) => {
 	$ZodEmail.init(inst, def);
 	ZodStringFormat.init(inst, def);
 });
+function email(params) {
+	return /* @__PURE__ */ _email(ZodEmail, params);
+}
 var ZodGUID = /*@__PURE__*/ $constructor("ZodGUID", (inst, def) => {
 	$ZodGUID.init(inst, def);
 	ZodStringFormat.init(inst, def);
@@ -5205,4 +5208,4 @@ function superRefine(fn, params) {
 	return /* @__PURE__ */ _superRefine(fn, params);
 }
 //#endregion
-export { union as a, string as i, number as n, object as r, literal as t };
+export { object as a, number as i, email as n, string as o, literal as r, union as s, _enum as t };

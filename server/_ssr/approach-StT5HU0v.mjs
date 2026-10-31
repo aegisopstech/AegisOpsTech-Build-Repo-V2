@@ -1,7 +1,7 @@
+import { a as intentions, d as shapes, s as method } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { c as method, d as shapes, o as intentions } from "./router-CRnRCdkH.mjs";
-import { t as SiteShell } from "./chrome-CwvkjpFy.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/approach-CdEyOMIM.js
+import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/approach-StT5HU0v.js
 var import_jsx_runtime = require_jsx_runtime();
 function ApproachPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [

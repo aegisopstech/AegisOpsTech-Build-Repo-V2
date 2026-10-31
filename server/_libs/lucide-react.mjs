@@ -1,5 +1,5 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { J as require_react } from "./@tanstack/react-router+[...].mjs";
+import { Y as require_react } from "./@tanstack/react-router+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -105,24 +105,6 @@ var Check = createLucideIcon("check", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var Copy = createLucideIcon("copy", [["rect", {
-	width: "14",
-	height: "14",
-	x: "8",
-	y: "8",
-	rx: "2",
-	ry: "2",
-	key: "17jyea"
-}], ["path", {
-	d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
-	key: "zix9uf"
-}]]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Menu = createLucideIcon("menu", [
 	["path", {
 		d: "M4 12h16",
@@ -171,4 +153,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { Check as a, Copy as i, TriangleAlert as n, ArrowRight as o, Menu as r, X as t };
+export { ArrowRight as a, Check as i, TriangleAlert as n, Menu as r, X as t };

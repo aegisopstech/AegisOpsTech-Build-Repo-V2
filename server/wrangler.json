@@ -3,7 +3,8 @@
   "name": "aegisops-web",
   "vars": {
     "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
-    "VITE_GROK_EXTENSIONS": "0"
+    "VITE_GROK_EXTENSIONS": "0",
+    "CONTACT_TO": "no-reply@aegisopstech.me"
   },
   "observability": {
     "enabled": true
