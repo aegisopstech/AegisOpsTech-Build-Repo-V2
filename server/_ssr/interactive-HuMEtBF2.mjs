@@ -4,7 +4,7 @@ import { S as require_jsx_runtime, Y as require_react, b as Link } from "../_lib
 import { a as ArrowRight, i as Check } from "../_libs/lucide-react.mjs";
 import { n as TSS_SERVER_FUNCTION, r as getServerFnById, t as createServerFn } from "./ssr.mjs";
 import { a as object, n as email, o as string, t as _enum } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/interactive-DknaMr9D.js
+//#region node_modules/.nitro/vite/services/ssr/assets/interactive-HuMEtBF2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var createSsrRpc = (functionId) => {
@@ -59,7 +59,7 @@ function StartHere() {
 	const [id, setId] = (0, import_react.useState)(null);
 	const current = STARTS.find((item) => item.id === id) ?? null;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+		className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "eyebrow",

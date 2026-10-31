@@ -1,12 +1,12 @@
 import { n as capabilities } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/engineering-Dxrlwh4l.js
+import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/engineering-DH2vlTak.js
 var import_jsx_runtime = require_jsx_runtime();
 function EngineeringPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-14 md:py-20",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-14 md:py-20",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -23,7 +23,7 @@ function EngineeringPage() {
 			]
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "mx-auto w-full max-w-6xl px-5 pb-8",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 pb-8",
 			children: capabilities.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 				className: "grid gap-6 border-t border-line py-10 md:grid-cols-12 md:py-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -54,7 +54,7 @@ function EngineeringPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "border-t border-line bg-navy text-paper",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto flex w-full max-w-6xl flex-wrap items-end justify-between gap-6 px-5 py-14",
+				className: "mx-auto flex w-full max-w-6xl flex-wrap items-end justify-between gap-6 px-5 md:px-8 xl:px-12 py-14",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-xl",
 					children: [

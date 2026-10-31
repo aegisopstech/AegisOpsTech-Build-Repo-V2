@@ -1,14 +1,14 @@
 import { f as trustPoints, i as industries, n as capabilities, r as frameworks, s as method, t as advisoryDomains } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as ArrowRight } from "../_libs/lucide-react.mjs";
-import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
-import { i as StartHere } from "./interactive-DknaMr9D.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-jpiDFEL5.js
+import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
+import { i as StartHere } from "./interactive-HuMEtBF2.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-X3RIc9dd.js
 var import_jsx_runtime = require_jsx_runtime();
 function Home() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-12 md:py-20",
+			className: "mx-auto grid w-full max-w-6xl items-center gap-10 px-5 md:px-8 xl:px-12 py-14 md:grid-cols-12 md:py-20",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "md:col-span-7",
 				children: [
@@ -17,7 +17,7 @@ function Home() {
 						children: "An advisory and engineering firm"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-						className: "rise rise-2 mt-4 font-display text-5xl font-semibold md:text-6xl",
+						className: "rise rise-2 mt-4 font-display text-5xl font-semibold md:text-6xl xl:text-7xl",
 						children: "Building the autonomous."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -51,7 +51,7 @@ function Home() {
 					alt: "AegisOps mark, a faceted letter A",
 					width: 784,
 					height: 1261,
-					className: "logo-mark h-56 w-auto"
+					className: "logo-mark h-56 w-auto xl:h-72"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 font-display text-sm font-semibold tracking-widest text-signal uppercase",
 					children: "Building the autonomous"
@@ -61,7 +61,7 @@ function Home() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "border-y border-line bg-card",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-				className: "mx-auto flex w-full max-w-6xl flex-wrap gap-x-8 gap-y-3 px-5 py-5",
+				className: "mx-auto flex w-full max-w-6xl flex-wrap gap-x-8 gap-y-3 px-5 md:px-8 xl:px-12 py-5",
 				children: frameworks.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
 					className: "font-display text-sm font-semibold tracking-wide text-navy",
 					children: item
@@ -69,7 +69,7 @@ function Home() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-10 md:grid-cols-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -119,7 +119,7 @@ function Home() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "navy-grid text-paper",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+				className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "eyebrow eyebrow-light",
@@ -158,7 +158,7 @@ function Home() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "flex flex-wrap items-end justify-between gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -203,7 +203,7 @@ function Home() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "border-t border-line bg-card",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+				className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "eyebrow",
@@ -235,7 +235,7 @@ function Home() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -270,7 +270,7 @@ function Home() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "bg-navy text-paper",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto grid w-full max-w-6xl gap-8 px-5 py-16 md:grid-cols-2 md:py-20",
+				className: "mx-auto grid w-full max-w-6xl gap-8 px-5 md:px-8 xl:px-12 py-16 md:grid-cols-2 md:py-20",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow eyebrow-light",
 					children: "The room"
@@ -295,7 +295,7 @@ function Home() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-24",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-24",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "rounded-card bg-foam px-6 py-10 md:px-10",
 				children: [

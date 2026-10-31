@@ -3,8 +3,8 @@ import { c as pageMeta } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, Y as require_react, _ as lazyRouteComponent, d as Scripts, f as HeadContent, g as Outlet, h as createRouter, v as createFileRoute, x as useRouter, y as createRootRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as object, i as number, o as string, r as literal, s as union } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-2x7lPanp.js
-var router_2x7lPanp_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-C43-shww.js
+var router_C43_shww_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var FALLBACK_MESSAGE = "An unexpected error occurred. Try reloading the page.";
@@ -332,7 +332,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-CETV02uR.css";
+var styles_default = "/assets/styles-B0iweEFc.css";
 var APP_NAME = "AegisOps Technologies";
 var Route$7 = createRootRoute({
 	head: () => ({
@@ -396,37 +396,37 @@ var Route$7 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter$6 = () => import("./routes-jpiDFEL5.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-X3RIc9dd.mjs");
 var Route$6 = createFileRoute("/")({
 	head: () => pageMeta("AegisOps Technologies — Building the Autonomous", "IT advisory for GRC, ISMS, and operations, plus agentic and software engineering. Autonomous systems, governed so you can trust them."),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-var $$splitComponentImporter$5 = () => import("../_-Dtn056bi.mjs");
+var $$splitComponentImporter$5 = () => import("../_-CZNClBz8.mjs");
 var Route$5 = createFileRoute("/$")({
 	head: () => pageMeta("Not found — AegisOps Technologies", "That page is not part of the AegisOps site."),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./advisory-6pym5GhS.mjs");
+var $$splitComponentImporter$4 = () => import("./advisory-E_gndm2t.mjs");
 var Route$4 = createFileRoute("/advisory")({
 	head: () => pageMeta("IT Advisory — AegisOps Technologies", "GRC, ISMS, cybersecurity, infrastructure, applications, data governance, continuity, and IT indicators. Advisory with an engineer’s standard."),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./agentic-D_bo-Vrq.mjs");
+var $$splitComponentImporter$3 = () => import("./agentic-Dh6ZZHRe.mjs");
 var Route$3 = createFileRoute("/agentic")({
 	head: () => pageMeta("Agentic engineering — AegisOps Technologies", "Business cases for governed agents across finance, healthcare, operations, and engineering pain: patching, vulnerabilities, compliance, and recovery."),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./approach-StT5HU0v.mjs");
+var $$splitComponentImporter$2 = () => import("./approach-C-Pv6oKz.mjs");
 var Route$2 = createFileRoute("/approach")({
 	head: () => pageMeta("Approach — AegisOps Technologies", "Seasoned judgment and young intelligence. How AegisOps decides what to assess, what to build, and what not to automate."),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./contact-BzZKV0uz.mjs");
+var $$splitComponentImporter$1 = () => import("./contact-Dao4DOG5.mjs");
 var Route$1 = createFileRoute("/contact")({
 	head: () => pageMeta("Start a brief — AegisOps Technologies", "Describe the audit, the queue, or the system, and send the brief straight to the AegisOps team."),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./engineering-Dxrlwh4l.mjs");
+var $$splitComponentImporter = () => import("./engineering-DH2vlTak.mjs");
 var Route = createFileRoute("/engineering")({
 	head: () => pageMeta("Software engineering — AegisOps Technologies", "Application architecture, experience, data, cloud, observability, and knowledge. Engineering depth behind every assessment."),
 	component: lazyRouteComponent($$splitComponentImporter, "component")
@@ -477,4 +477,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_2x7lPanp_exports as t };
+export { getRouter, router_C43_shww_exports as t };

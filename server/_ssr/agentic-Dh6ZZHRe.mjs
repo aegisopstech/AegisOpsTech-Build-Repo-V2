@@ -1,13 +1,13 @@
 import { f as trustPoints } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
-import { n as CaseBoard, r as Loop } from "./interactive-DknaMr9D.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/agentic-D_bo-Vrq.js
+import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
+import { n as CaseBoard, r as Loop } from "./interactive-HuMEtBF2.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/agentic-Dh6ZZHRe.js
 var import_jsx_runtime = require_jsx_runtime();
 function AgenticPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-14 md:py-20",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-14 md:py-20",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -41,7 +41,7 @@ function AgenticPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "border-y border-line bg-card",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-				className: "mx-auto grid w-full max-w-6xl gap-6 px-5 py-10 sm:grid-cols-2 lg:grid-cols-4",
+				className: "mx-auto grid w-full max-w-6xl gap-6 px-5 md:px-8 xl:px-12 py-10 sm:grid-cols-2 lg:grid-cols-4",
 				children: trustPoints.map((point) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "font-display text-lg font-semibold",
 					children: point.title
@@ -52,7 +52,7 @@ function AgenticPage() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -75,7 +75,7 @@ function AgenticPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "bg-paper-2",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-20",
+				className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-20",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "eyebrow",
@@ -97,7 +97,7 @@ function AgenticPage() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-16",
+			className: "mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-5 md:px-8 xl:px-12 py-16",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "max-w-xl font-display text-2xl font-semibold",
 				children: "If the queue is real, scope one pilot. If it is not, we will say so."

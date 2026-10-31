@@ -2,7 +2,7 @@ import { r as __toESM } from "../_runtime.mjs";
 import { r as frameworks } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, Y as require_react, b as Link, p as useRouterState } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as Menu, t as X } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/chrome-3N-cmV4B.js
+//#region node_modules/.nitro/vite/services/ssr/assets/chrome-CvJ8SivA.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var NAV = [
@@ -69,7 +69,7 @@ function SiteHeader() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
 		className: "sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5",
+			className: "mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5 md:px-8 xl:px-12",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 					to: "/",
@@ -142,7 +142,7 @@ function SiteFooter() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
 		className: "bg-navy text-paper",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 md:grid-cols-12",
+			className: "mx-auto grid w-full max-w-6xl gap-10 px-5 md:px-8 xl:px-12 py-14 md:grid-cols-12",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "md:col-span-5",
@@ -228,7 +228,7 @@ function SiteFooter() {
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "border-t border-paper/15",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-				className: "mx-auto w-full max-w-6xl px-5 py-5 text-sm text-paper/70",
+				className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-5 text-sm text-paper/70",
 				children: [
 					"© ",
 					(/* @__PURE__ */ new Date()).getFullYear(),

@@ -1,12 +1,12 @@
 import { a as intentions, d as shapes, s as method } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/approach-StT5HU0v.js
+import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/approach-C-Pv6oKz.js
 var import_jsx_runtime = require_jsx_runtime();
 function ApproachPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-14 md:py-20",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-14 md:py-20",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -25,7 +25,7 @@ function ApproachPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "border-y border-line bg-card",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mx-auto flex w-full max-w-6xl justify-center px-5 py-12",
+				className: "mx-auto flex w-full max-w-6xl justify-center px-5 md:px-8 xl:px-12 py-12",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: "/brand/lockup.png",
 					alt: "AegisOps Technologies. Building the autonomous.",
@@ -36,7 +36,7 @@ function ApproachPage() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto grid w-full max-w-6xl gap-6 px-5 py-16 md:grid-cols-2",
+			className: "mx-auto grid w-full max-w-6xl gap-6 px-5 md:px-8 xl:px-12 py-16 md:grid-cols-2",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 				className: "rounded-card bg-navy p-7 text-paper",
 				children: [
@@ -74,7 +74,7 @@ function ApproachPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "bg-paper-2",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-20",
+				className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-20",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "eyebrow",
@@ -108,7 +108,7 @@ function ApproachPage() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16 md:py-20",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16 md:py-20",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",

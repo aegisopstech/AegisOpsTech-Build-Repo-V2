@@ -1,15 +1,15 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { t as advisoryDomains } from "./site-B37hbEET.mjs";
 import { S as require_jsx_runtime, Y as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as SiteShell } from "./chrome-3N-cmV4B.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/advisory-6pym5GhS.js
+import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/advisory-E_gndm2t.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function AdvisoryPage() {
 	const [active, setActive] = (0, import_react.useState)(advisoryDomains[0]?.id ?? "grc");
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-14 md:py-20",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-14 md:py-20",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow",
@@ -28,7 +28,7 @@ function AdvisoryPage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "sticky top-16 z-30 border-y border-line bg-paper/95 backdrop-blur",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mx-auto flex w-full max-w-6xl gap-2 overflow-x-auto px-5 py-3",
+				className: "mx-auto flex w-full max-w-6xl gap-2 overflow-x-auto px-5 md:px-8 xl:px-12 py-3",
 				children: advisoryDomains.map((domain) => {
 					const on = domain.id === active;
 					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -45,7 +45,7 @@ function AdvisoryPage() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "mx-auto w-full max-w-6xl px-5",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12",
 			children: advisoryDomains.map((domain) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				id: domain.id,
 				className: "scroll-mt-36 border-b border-line py-12 md:py-16",
@@ -84,7 +84,7 @@ function AdvisoryPage() {
 			}, domain.id))
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "mx-auto w-full max-w-6xl px-5 py-16",
+			className: "mx-auto w-full max-w-6xl px-5 md:px-8 xl:px-12 py-16",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "rounded-card bg-navy px-6 py-10 text-paper md:px-10",
 				children: [
