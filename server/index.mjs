@@ -17,86 +17,86 @@ var public_assets_data_default = {
 	"/assets/advisory-BIo1KeAF.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"c57-DONAihnZOtYlXhYEDb89jeyC/Cc\"",
-		"mtime": "2026-10-31T13:54:29.461Z",
+		"mtime": "2026-10-31T14:02:43.379Z",
 		"size": 3159,
 		"path": "../public/assets/advisory-BIo1KeAF.js"
-	},
-	"/assets/agentic-C19Cpoc-.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"c86-NItWAlGOls3AtyomKMPPFsy33EI\"",
-		"mtime": "2026-10-31T13:54:29.462Z",
-		"size": 3206,
-		"path": "../public/assets/agentic-C19Cpoc-.js"
-	},
-	"/og.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"feeb-0JYejM/bL7ctPqVgEZMBcGR2KrI\"",
-		"mtime": "2026-10-31T06:16:44.840Z",
-		"size": 65259,
-		"path": "../public/og.jpg"
 	},
 	"/assets/approach-YTj5QYwC.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"fa9-YoAX62CBEQnxSLDnEKfA9jLUu8Y\"",
-		"mtime": "2026-10-31T13:54:29.462Z",
+		"mtime": "2026-10-31T14:02:43.380Z",
 		"size": 4009,
 		"path": "../public/assets/approach-YTj5QYwC.js"
 	},
 	"/assets/contact-CD2MDKOa.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"506-Weu0W0HWhEHqEfYHUyri4dZb6hc\"",
-		"mtime": "2026-10-31T13:54:29.464Z",
+		"mtime": "2026-10-31T14:02:43.382Z",
 		"size": 1286,
 		"path": "../public/assets/contact-CD2MDKOa.js"
 	},
 	"/assets/engineering-Cep7FtiU.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"98e-FpADUBGJaQBYPfMhfvrrf/f0pcU\"",
-		"mtime": "2026-10-31T13:54:29.465Z",
+		"mtime": "2026-10-31T14:02:43.382Z",
 		"size": 2446,
 		"path": "../public/assets/engineering-Cep7FtiU.js"
 	},
 	"/assets/chrome-BzBOc9Up.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"1699-jPT4JIrXI5fxHa/Y6Z9SG1b6tro\"",
-		"mtime": "2026-10-31T13:54:29.464Z",
+		"mtime": "2026-10-31T14:02:43.381Z",
 		"size": 5785,
 		"path": "../public/assets/chrome-BzBOc9Up.js"
 	},
-	"/assets/routes-DppwkRJr.js": {
+	"/assets/agentic-C19Cpoc-.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"286c-psC/OhRP5Rd/q94X54bGYk0qb5I\"",
-		"mtime": "2026-10-31T13:54:29.467Z",
-		"size": 10348,
-		"path": "../public/assets/routes-DppwkRJr.js"
+		"etag": "\"c86-NItWAlGOls3AtyomKMPPFsy33EI\"",
+		"mtime": "2026-10-31T14:02:43.380Z",
+		"size": 3206,
+		"path": "../public/assets/agentic-C19Cpoc-.js"
 	},
-	"/assets/index-B8LSueJU.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6f6d9-kvLSUODmr1KsvYgXe54mlxHvu3E\"",
-		"mtime": "2026-10-31T13:54:29.458Z",
-		"size": 456409,
-		"path": "../public/assets/index-B8LSueJU.js"
+	"/og.png": {
+		"type": "image/png",
+		"etag": "\"3b448-/nc3pWJXbcVgXpUsMzlR0Akk42o\"",
+		"mtime": "2026-10-31T14:02:05.712Z",
+		"size": 242760,
+		"path": "../public/og.png"
 	},
 	"/assets/interactive-BZVfhsmd.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"3c90-RjkbZhT/SJXwmywdf6ouDl04Dgw\"",
-		"mtime": "2026-10-31T13:54:29.466Z",
+		"mtime": "2026-10-31T14:02:43.383Z",
 		"size": 15504,
 		"path": "../public/assets/interactive-BZVfhsmd.js"
+	},
+	"/assets/routes-DppwkRJr.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"286c-psC/OhRP5Rd/q94X54bGYk0qb5I\"",
+		"mtime": "2026-10-31T14:02:43.383Z",
+		"size": 10348,
+		"path": "../public/assets/routes-DppwkRJr.js"
 	},
 	"/assets/styles-DqemUgTc.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"8bc1-Gfm0Y2ZiXDMnvt4Ey5Dob1nOlwU\"",
-		"mtime": "2026-10-31T13:54:29.467Z",
+		"mtime": "2026-10-31T14:02:43.383Z",
 		"size": 35777,
 		"path": "../public/assets/styles-DqemUgTc.css"
 	},
 	"/assets/_-D_wsSCtY.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"328-kRclrRRj5DEII8MNK6ZFGnTuE2Y\"",
-		"mtime": "2026-10-31T13:54:29.460Z",
+		"mtime": "2026-10-31T14:02:43.379Z",
 		"size": 808,
 		"path": "../public/assets/_-D_wsSCtY.js"
+	},
+	"/brand/lockup.png": {
+		"type": "image/png",
+		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
+		"mtime": "2026-10-31T06:16:44.922Z",
+		"size": 287468,
+		"path": "../public/brand/lockup.png"
 	},
 	"/__grok/icon-180.png": {
 		"type": "image/png",
@@ -112,19 +112,19 @@ var public_assets_data_default = {
 		"size": 6717,
 		"path": "../public/__grok/install/styles.css"
 	},
-	"/__grok/install/assets/homescreen/glass-share.svg": {
-		"type": "image/svg+xml",
-		"etag": "\"954-jb3ATcKjqgMOYrA/4w1v21j0Jvg\"",
-		"mtime": "2026-10-31T06:16:44.882Z",
-		"size": 2388,
-		"path": "../public/__grok/install/assets/homescreen/glass-share.svg"
-	},
 	"/__grok/install/assets/homescreen/glass-puzzle.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"713-AP2wG8KChAGjse1Fn+f/+vDN+sQ\"",
 		"mtime": "2026-10-31T06:16:44.876Z",
 		"size": 1811,
 		"path": "../public/__grok/install/assets/homescreen/glass-puzzle.svg"
+	},
+	"/__grok/install/assets/homescreen/glass-share.svg": {
+		"type": "image/svg+xml",
+		"etag": "\"954-jb3ATcKjqgMOYrA/4w1v21j0Jvg\"",
+		"mtime": "2026-10-31T06:16:44.882Z",
+		"size": 2388,
+		"path": "../public/__grok/install/assets/homescreen/glass-share.svg"
 	},
 	"/__grok/install/assets/homescreen/logo-grok.svg": {
 		"type": "image/svg+xml",
@@ -133,19 +133,19 @@ var public_assets_data_default = {
 		"size": 1059,
 		"path": "../public/__grok/install/assets/homescreen/logo-grok.svg"
 	},
-	"/brand/lockup.png": {
+	"/__grok/install/assets/homescreen/ob-ipad.png": {
 		"type": "image/png",
-		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
-		"mtime": "2026-10-31T06:16:44.922Z",
-		"size": 287468,
-		"path": "../public/brand/lockup.png"
+		"etag": "\"18dd3-wlRwrpmBImStuiu+4poVz7ANin4\"",
+		"mtime": "2026-10-31T06:16:44.896Z",
+		"size": 101843,
+		"path": "../public/__grok/install/assets/homescreen/ob-ipad.png"
 	},
-	"/__grok/install/assets/homescreen/plus.svg": {
-		"type": "image/svg+xml",
-		"etag": "\"961-sSBPunx/13vbMNAlPxb7UeO3l3A\"",
-		"mtime": "2026-10-31T06:16:44.909Z",
-		"size": 2401,
-		"path": "../public/__grok/install/assets/homescreen/plus.svg"
+	"/assets/index-B8LSueJU.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6f6d9-kvLSUODmr1KsvYgXe54mlxHvu3E\"",
+		"mtime": "2026-10-31T14:02:43.378Z",
+		"size": 456409,
+		"path": "../public/assets/index-B8LSueJU.js"
 	},
 	"/__grok/install/assets/homescreen/ob-phone.png": {
 		"type": "image/png",
@@ -154,19 +154,19 @@ var public_assets_data_default = {
 		"size": 103612,
 		"path": "../public/__grok/install/assets/homescreen/ob-phone.png"
 	},
+	"/__grok/install/assets/homescreen/plus.svg": {
+		"type": "image/svg+xml",
+		"etag": "\"961-sSBPunx/13vbMNAlPxb7UeO3l3A\"",
+		"mtime": "2026-10-31T06:16:44.909Z",
+		"size": 2401,
+		"path": "../public/__grok/install/assets/homescreen/plus.svg"
+	},
 	"/brand/mark.png": {
 		"type": "image/png",
 		"etag": "\"5ee33-R+VzZs0YqaF1ubhNO5FFywOnX44\"",
 		"mtime": "2026-10-31T06:16:44.930Z",
 		"size": 388659,
 		"path": "../public/brand/mark.png"
-	},
-	"/__grok/install/assets/homescreen/ob-ipad.png": {
-		"type": "image/png",
-		"etag": "\"18dd3-wlRwrpmBImStuiu+4poVz7ANin4\"",
-		"mtime": "2026-10-31T06:16:44.896Z",
-		"size": 101843,
-		"path": "../public/__grok/install/assets/homescreen/ob-ipad.png"
 	},
 	"/brand/logo-animated.mp4": {
 		"type": "video/mp4",
@@ -197,7 +197,7 @@ var install_page_default = "<!DOCTYPE html>\n<html lang=\"en\" class=\"device-de
 var grokOgIdentity = { "site": {
 	"title": "AegisOps Technologies",
 	"card": "custom",
-	"image": "/og.jpg"
+	"image": "/og.png"
 } };
 //#endregion
 //#region scripts/grok-pwa-shared.mjs
