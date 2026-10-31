@@ -1,10 +1,130 @@
+import { r as __toESM } from "../_runtime.mjs";
 import { f as trustPoints, i as industries, n as capabilities, r as frameworks, s as method, t as advisoryDomains } from "./site-B37hbEET.mjs";
-import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { S as require_jsx_runtime, Y as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as ArrowRight } from "../_libs/lucide-react.mjs";
 import { t as SiteShell } from "./chrome-CvJ8SivA.mjs";
 import { i as StartHere } from "./interactive-HuMEtBF2.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-X3RIc9dd.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CsIEfiSF.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
+var VIDEO_SRC = "/brand/logo-animated.mp4";
+var VIDEO_WIDTH = 416;
+var VIDEO_HEIGHT = 736;
+/**
+* How far from white (on the darkest channel) a pixel must be to stay fully
+* opaque. Pure white becomes transparent; the logo's saturated blues and teals
+* sit far above this and are untouched.
+*/
+var KEY_RANGE = 64;
+/** Make the video's white background transparent, in place. */
+function keyOutWhite(data) {
+	for (let i = 0; i < data.length; i += 4) {
+		const r = data[i];
+		const g = data[i + 1];
+		const b = data[i + 2];
+		const alpha = (255 - Math.min(r, g, b)) / KEY_RANGE;
+		if (alpha >= 1) continue;
+		if (alpha <= 0) {
+			data[i + 3] = 0;
+			continue;
+		}
+		const white = 255 * (1 - alpha);
+		data[i] = (r - white) / alpha;
+		data[i + 1] = (g - white) / alpha;
+		data[i + 2] = (b - white) / alpha;
+		data[i + 3] = alpha * 255;
+	}
+}
+/**
+* The hero mark: the rotating logo video with its white background keyed out on
+* a canvas, so it sits directly on the navy card. The static mark shows until
+* the first frame is drawn, and stays when motion is reduced, data saving is on,
+* or the video can't play.
+*/
+function AnimatedMark({ className = "" }) {
+	const videoRef = (0, import_react.useRef)(null);
+	const canvasRef = (0, import_react.useRef)(null);
+	const [enabled, setEnabled] = (0, import_react.useState)(false);
+	const [live, setLive] = (0, import_react.useState)(false);
+	(0, import_react.useEffect)(() => {
+		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		const saveData = navigator.connection?.saveData;
+		if (!reduceMotion && !saveData) setEnabled(true);
+	}, []);
+	(0, import_react.useEffect)(() => {
+		const video = videoRef.current;
+		const canvas = canvasRef.current;
+		if (!enabled || !video || !canvas) return;
+		const ctx = canvas.getContext("2d", { willReadFrequently: true });
+		if (!ctx) return;
+		let stopped = false;
+		let shown = false;
+		let frameId = 0;
+		const useVideoFrames = "requestVideoFrameCallback" in video;
+		const schedule = () => {
+			if (stopped) return;
+			frameId = useVideoFrames ? video.requestVideoFrameCallback(draw) : requestAnimationFrame(draw);
+		};
+		function draw() {
+			if (stopped) return;
+			if (video.readyState >= 2) {
+				ctx.drawImage(video, 0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+				const frame = ctx.getImageData(0, 0, VIDEO_WIDTH, VIDEO_HEIGHT);
+				keyOutWhite(frame.data);
+				ctx.putImageData(frame, 0, 0);
+				if (!shown) {
+					shown = true;
+					setLive(true);
+				}
+			}
+			schedule();
+		}
+		video.muted = true;
+		const observer = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) video.play().catch(() => void 0);
+			else video.pause();
+		});
+		observer.observe(canvas.parentElement ?? canvas);
+		schedule();
+		return () => {
+			stopped = true;
+			observer.disconnect();
+			if (useVideoFrames) video.cancelVideoFrameCallback(frameId);
+			else cancelAnimationFrame(frameId);
+			video.pause();
+		};
+	}, [enabled]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+			src: "/brand/mark.png",
+			alt: "AegisOps mark, a faceted letter A",
+			width: 784,
+			height: 1261,
+			className: `logo-mark w-auto ${className} ${live ? "hidden" : ""}`
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("canvas", {
+			ref: canvasRef,
+			width: VIDEO_WIDTH,
+			height: VIDEO_HEIGHT,
+			role: "img",
+			"aria-label": "AegisOps mark, a faceted letter A, rotating",
+			className: `w-auto ${className} ${live ? "" : "hidden"}`
+		}),
+		enabled ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("video", {
+			ref: videoRef,
+			src: VIDEO_SRC,
+			muted: true,
+			autoPlay: true,
+			loop: true,
+			playsInline: true,
+			preload: "auto",
+			"aria-hidden": "true",
+			tabIndex: -1,
+			className: "pointer-events-none absolute h-px w-px opacity-0",
+			onError: () => setEnabled(false)
+		}) : null
+	] });
+}
 function Home() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SiteShell, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
@@ -46,13 +166,7 @@ function Home() {
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "navy-grid flex flex-col items-center rounded-card px-6 py-10 text-center md:col-span-5",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-					src: "/brand/mark.png",
-					alt: "AegisOps mark, a faceted letter A",
-					width: 784,
-					height: 1261,
-					className: "logo-mark h-56 w-auto xl:h-72"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedMark, { className: "h-56 xl:h-72" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 font-display text-sm font-semibold tracking-widest text-signal uppercase",
 					children: "Building the autonomous"
 				})]
