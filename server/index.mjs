@@ -3,6 +3,7 @@ import { i as toEventHandler, n as HTTPError, o as FastResponse, r as defineLazy
 import { t as HookableCore } from "./_libs/hookable.mjs";
 import processModule from "node:process";
 import { Buffer } from "node:buffer";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 //#region #nitro/virtual/public-assets-data
@@ -14,89 +15,12 @@ var public_assets_data_default = {
 		"size": 345,
 		"path": "../public/favicon.svg"
 	},
-	"/assets/advisory-BIo1KeAF.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"c57-DONAihnZOtYlXhYEDb89jeyC/Cc\"",
-		"mtime": "2026-10-31T14:02:43.379Z",
-		"size": 3159,
-		"path": "../public/assets/advisory-BIo1KeAF.js"
-	},
-	"/assets/approach-YTj5QYwC.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"fa9-YoAX62CBEQnxSLDnEKfA9jLUu8Y\"",
-		"mtime": "2026-10-31T14:02:43.380Z",
-		"size": 4009,
-		"path": "../public/assets/approach-YTj5QYwC.js"
-	},
-	"/assets/contact-CD2MDKOa.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"506-Weu0W0HWhEHqEfYHUyri4dZb6hc\"",
-		"mtime": "2026-10-31T14:02:43.382Z",
-		"size": 1286,
-		"path": "../public/assets/contact-CD2MDKOa.js"
-	},
-	"/assets/engineering-Cep7FtiU.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"98e-FpADUBGJaQBYPfMhfvrrf/f0pcU\"",
-		"mtime": "2026-10-31T14:02:43.382Z",
-		"size": 2446,
-		"path": "../public/assets/engineering-Cep7FtiU.js"
-	},
-	"/assets/chrome-BzBOc9Up.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1699-jPT4JIrXI5fxHa/Y6Z9SG1b6tro\"",
-		"mtime": "2026-10-31T14:02:43.381Z",
-		"size": 5785,
-		"path": "../public/assets/chrome-BzBOc9Up.js"
-	},
-	"/assets/agentic-C19Cpoc-.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"c86-NItWAlGOls3AtyomKMPPFsy33EI\"",
-		"mtime": "2026-10-31T14:02:43.380Z",
-		"size": 3206,
-		"path": "../public/assets/agentic-C19Cpoc-.js"
-	},
 	"/og.png": {
 		"type": "image/png",
-		"etag": "\"3b448-/nc3pWJXbcVgXpUsMzlR0Akk42o\"",
-		"mtime": "2026-10-31T14:02:05.712Z",
-		"size": 242760,
+		"etag": "\"20703-6pmsOoAUcAk5rHYsR2PTIGgoh40\"",
+		"mtime": "2026-10-31T14:07:10.107Z",
+		"size": 132867,
 		"path": "../public/og.png"
-	},
-	"/assets/interactive-BZVfhsmd.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"3c90-RjkbZhT/SJXwmywdf6ouDl04Dgw\"",
-		"mtime": "2026-10-31T14:02:43.383Z",
-		"size": 15504,
-		"path": "../public/assets/interactive-BZVfhsmd.js"
-	},
-	"/assets/routes-DppwkRJr.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"286c-psC/OhRP5Rd/q94X54bGYk0qb5I\"",
-		"mtime": "2026-10-31T14:02:43.383Z",
-		"size": 10348,
-		"path": "../public/assets/routes-DppwkRJr.js"
-	},
-	"/assets/styles-DqemUgTc.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"8bc1-Gfm0Y2ZiXDMnvt4Ey5Dob1nOlwU\"",
-		"mtime": "2026-10-31T14:02:43.383Z",
-		"size": 35777,
-		"path": "../public/assets/styles-DqemUgTc.css"
-	},
-	"/assets/_-D_wsSCtY.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"328-kRclrRRj5DEII8MNK6ZFGnTuE2Y\"",
-		"mtime": "2026-10-31T14:02:43.379Z",
-		"size": 808,
-		"path": "../public/assets/_-D_wsSCtY.js"
-	},
-	"/brand/lockup.png": {
-		"type": "image/png",
-		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
-		"mtime": "2026-10-31T06:16:44.922Z",
-		"size": 287468,
-		"path": "../public/brand/lockup.png"
 	},
 	"/__grok/icon-180.png": {
 		"type": "image/png",
@@ -105,12 +29,103 @@ var public_assets_data_default = {
 		"size": 2100,
 		"path": "../public/__grok/icon-180.png"
 	},
+	"/assets/advisory-BIo1KeAF.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"c57-DONAihnZOtYlXhYEDb89jeyC/Cc\"",
+		"mtime": "2026-10-31T14:07:48.607Z",
+		"size": 3159,
+		"path": "../public/assets/advisory-BIo1KeAF.js"
+	},
+	"/assets/agentic-C19Cpoc-.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"c86-NItWAlGOls3AtyomKMPPFsy33EI\"",
+		"mtime": "2026-10-31T14:07:48.608Z",
+		"size": 3206,
+		"path": "../public/assets/agentic-C19Cpoc-.js"
+	},
+	"/assets/approach-YTj5QYwC.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"fa9-YoAX62CBEQnxSLDnEKfA9jLUu8Y\"",
+		"mtime": "2026-10-31T14:07:48.608Z",
+		"size": 4009,
+		"path": "../public/assets/approach-YTj5QYwC.js"
+	},
+	"/assets/engineering-Cep7FtiU.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"98e-FpADUBGJaQBYPfMhfvrrf/f0pcU\"",
+		"mtime": "2026-10-31T14:07:48.611Z",
+		"size": 2446,
+		"path": "../public/assets/engineering-Cep7FtiU.js"
+	},
+	"/assets/chrome-BzBOc9Up.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"1699-jPT4JIrXI5fxHa/Y6Z9SG1b6tro\"",
+		"mtime": "2026-10-31T14:07:48.610Z",
+		"size": 5785,
+		"path": "../public/assets/chrome-BzBOc9Up.js"
+	},
+	"/assets/contact-CD2MDKOa.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"506-Weu0W0HWhEHqEfYHUyri4dZb6hc\"",
+		"mtime": "2026-10-31T14:07:48.610Z",
+		"size": 1286,
+		"path": "../public/assets/contact-CD2MDKOa.js"
+	},
+	"/brand/lockup.png": {
+		"type": "image/png",
+		"etag": "\"462ec-Bd0vXlhJF08N7tXqx58gmHpQTkw\"",
+		"mtime": "2026-10-31T06:16:44.922Z",
+		"size": 287468,
+		"path": "../public/brand/lockup.png"
+	},
+	"/assets/interactive-BZVfhsmd.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"3c90-RjkbZhT/SJXwmywdf6ouDl04Dgw\"",
+		"mtime": "2026-10-31T14:07:48.611Z",
+		"size": 15504,
+		"path": "../public/assets/interactive-BZVfhsmd.js"
+	},
+	"/assets/routes-DppwkRJr.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"286c-psC/OhRP5Rd/q94X54bGYk0qb5I\"",
+		"mtime": "2026-10-31T14:07:48.611Z",
+		"size": 10348,
+		"path": "../public/assets/routes-DppwkRJr.js"
+	},
+	"/assets/_-D_wsSCtY.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"328-kRclrRRj5DEII8MNK6ZFGnTuE2Y\"",
+		"mtime": "2026-10-31T14:07:48.606Z",
+		"size": 808,
+		"path": "../public/assets/_-D_wsSCtY.js"
+	},
+	"/assets/index-B8LSueJU.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6f6d9-kvLSUODmr1KsvYgXe54mlxHvu3E\"",
+		"mtime": "2026-10-31T14:07:48.605Z",
+		"size": 456409,
+		"path": "../public/assets/index-B8LSueJU.js"
+	},
+	"/assets/styles-DqemUgTc.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"8bc1-Gfm0Y2ZiXDMnvt4Ey5Dob1nOlwU\"",
+		"mtime": "2026-10-31T14:07:48.612Z",
+		"size": 35777,
+		"path": "../public/assets/styles-DqemUgTc.css"
+	},
 	"/__grok/install/styles.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"1a3d-VUsWOMAheo1/P30EqU5qaIkyvIQ\"",
 		"mtime": "2026-10-31T06:16:44.861Z",
 		"size": 6717,
 		"path": "../public/__grok/install/styles.css"
+	},
+	"/__grok/install/assets/homescreen/logo-grok.svg": {
+		"type": "image/svg+xml",
+		"etag": "\"423-5mXO+yh9KW40jM3to5JlWPhxNK8\"",
+		"mtime": "2026-10-31T06:16:44.888Z",
+		"size": 1059,
+		"path": "../public/__grok/install/assets/homescreen/logo-grok.svg"
 	},
 	"/__grok/install/assets/homescreen/glass-puzzle.svg": {
 		"type": "image/svg+xml",
@@ -126,26 +141,12 @@ var public_assets_data_default = {
 		"size": 2388,
 		"path": "../public/__grok/install/assets/homescreen/glass-share.svg"
 	},
-	"/__grok/install/assets/homescreen/logo-grok.svg": {
-		"type": "image/svg+xml",
-		"etag": "\"423-5mXO+yh9KW40jM3to5JlWPhxNK8\"",
-		"mtime": "2026-10-31T06:16:44.888Z",
-		"size": 1059,
-		"path": "../public/__grok/install/assets/homescreen/logo-grok.svg"
-	},
 	"/__grok/install/assets/homescreen/ob-ipad.png": {
 		"type": "image/png",
 		"etag": "\"18dd3-wlRwrpmBImStuiu+4poVz7ANin4\"",
 		"mtime": "2026-10-31T06:16:44.896Z",
 		"size": 101843,
 		"path": "../public/__grok/install/assets/homescreen/ob-ipad.png"
-	},
-	"/assets/index-B8LSueJU.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6f6d9-kvLSUODmr1KsvYgXe54mlxHvu3E\"",
-		"mtime": "2026-10-31T14:02:43.378Z",
-		"size": 456409,
-		"path": "../public/assets/index-B8LSueJU.js"
 	},
 	"/__grok/install/assets/homescreen/ob-phone.png": {
 		"type": "image/png",
@@ -197,7 +198,8 @@ var install_page_default = "<!DOCTYPE html>\n<html lang=\"en\" class=\"device-de
 var grokOgIdentity = { "site": {
 	"title": "AegisOps Technologies",
 	"card": "custom",
-	"image": "/og.png"
+	"image": "/og.png",
+	"imageVersion": "e068d9ddd1"
 } };
 //#endregion
 //#region scripts/grok-pwa-shared.mjs
@@ -384,6 +386,7 @@ function snapshotOgIdentity(cwd = processModule.cwd()) {
 	if (disk) {
 		site.card = "custom";
 		site.image = disk;
+		site.imageVersion = createHash("sha256").update(readFileSync(join(cwd, "public", disk))).digest("hex").slice(0, 10);
 	} else {
 		if (siteHasCustomCard(site)) delete site.card;
 		if (site.image) delete site.image;
@@ -441,6 +444,8 @@ function grokOgHeadTags({ host = "", appName = DEFAULT_APP_NAME, site = {}, docu
 		let image = custom ? `https://${publicHost}${asset.startsWith("/") ? asset : `/${asset}`}` : `${ogServiceUrl()}/v1/card.png?host=${encodeURIComponent(publicHost)}&title=${encodeURIComponent(title)}`;
 		const color = !custom ? placeholderCardColor(site) : "";
 		if (color) image += `&color=${encodeURIComponent(color)}`;
+		const version = custom ? String(site.imageVersion ?? "").trim() : "";
+		if (version) image += `?v=${encodeURIComponent(version)}`;
 		tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
 		tags.push(`<meta property="og:image:width" content="1200">`);
 		tags.push(`<meta property="og:image:height" content="630">`);
