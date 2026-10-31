@@ -1,0 +1,29 @@
+﻿{
+  "compatibility_date": "2026-10-01",
+  "name": "aegisops-web",
+  "vars": {
+    "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
+    "VITE_GROK_EXTENSIONS": "0"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "main": "index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../public"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "**/*.mjs",
+        "**/*.js"
+      ]
+    }
+  ]
+}

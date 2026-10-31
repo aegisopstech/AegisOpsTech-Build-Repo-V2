@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-31T08:25:51.448Z",
+  "preset": "cloudflare-module",
+  "framework": {
+    "name": "nitro",
+    "version": "3.0.260610-beta"
+  },
+  "versions": {
+    "nitro": "3.0.260610-beta"
+  },
+  "serverEntry": "server/index.mjs",
+  "publicDir": "public",
+  "commands": {
+    "preview": "npx wrangler --cwd ./ dev",
+    "deploy": "npx wrangler --cwd ./ deploy"
+  },
+  "config": {
+    "cloudflare": {
+      "wrangler": {
+        "name": "aegisops-web",
+        "vars": {
+          "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
+          "VITE_GROK_EXTENSIONS": "0"
+        },
+        "observability": {
+          "enabled": true
+        }
+      },
+      "deployConfig": true,
+      "nodeCompat": true
+    }
+  }
+}
