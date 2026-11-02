@@ -2,9 +2,9 @@
   "compatibility_date": "2026-10-01",
   "name": "aegisops-web",
   "vars": {
-    "CONTACT_TO": "no-reply@aegisopstech.me",
+    "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
     "VITE_GROK_EXTENSIONS": "0",
-    "VITE_PUBLIC_HOSTNAME": "aegisopstech.me"
+    "CONTACT_TO": "aegisopstech@gmail.com"
   },
   "observability": {
     "enabled": true
