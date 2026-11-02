@@ -396,6 +396,22 @@ var require_react = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 }));
 //#endregion
 //#region node_modules/@tanstack/router-core/dist/esm/not-found.js
+/**
+* Create a not-found error object recognized by TanStack Router.
+*
+* Throw this from loaders/actions to trigger the nearest `notFoundComponent`.
+* Use `routeId` to target a specific route's not-found boundary. If `throw`
+* is true, the error is thrown instead of returned.
+*
+* @param options Optional settings including `routeId`, `headers`, and `throw`.
+* @returns A not-found error object that can be thrown or returned.
+* @link https://tanstack.com/router/latest/docs/router/framework/react/api/router/notFoundFunction
+*/
+function notFound(options = {}) {
+	options.isNotFound = true;
+	if (options.throw) throw options;
+	return options;
+}
 /** Determine if a value is a TanStack Router not-found error. */
 function isNotFound(obj) {
 	return obj?.isNotFound === true;
@@ -4281,8 +4297,10 @@ function createDateNode(id, current) {
 function createTemporalNode(id, type, current) {
 	return createSerovalNode(36, id, current.toString(), type);
 }
+var getRegExpSource = Object.getOwnPropertyDescriptor(RegExp.prototype, "source").get;
+var getRegExpFlags = Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get;
 function createRegExpNode(id, current) {
-	return createSerovalNode(6, id, void 0, serializeString(current.source), current.flags);
+	return createSerovalNode(6, id, void 0, serializeString(getRegExpSource.call(current)), getRegExpFlags.call(current));
 }
 function createWKSymbolNode(id, current) {
 	return createSerovalNode(17, id, INV_SYMBOL_REF[current]);
@@ -18591,4 +18609,4 @@ var renderRouterToStream = async ({ request, router, responseHeaders, children }
 	}
 };
 //#endregion
-export { createInlineCssPlaceholderAsset as A, createSieveCache as B, createPlugin as C, isStream as D, fromJSON as E, resolveManifestCssLink as F, isRedirect as G, isDangerousProtocol as H, waitForReason as I, isNotFound as J, parseRedirect as K, _getRenderedMatches as L, getScriptPreloadAttrs as M, getStylesheetHref as N, toCrossJSONAsync as O, resolveManifestAssetLink as P, executeRewriteInput as R, require_jsx_runtime as S, crossSerializeStream as T, isPromise as U, decodePath as V, dehydrateSsrMatchId as W, require_react as Y, lazyRouteComponent as _, isSsrResponse as a, Link as b, stripSsrResponseBody as c, Scripts as d, HeadContent as f, Outlet as g, createRouter as h, disposeSsrResponse as i, createInlineCssStyleAsset as j, toCrossJSONStream as k, createHydrationScripts as l, RouterProvider as m, bindSsrResponseToRequest as n, normalizeSsrResponse as o, useRouterState as p, rootRouteId as q, defineHandlerCallback as r, replaceSsrResponse as s, renderRouterToStream as t, GLOBAL_TSR as u, createFileRoute as v, createStream as w, useRouter as x, createRootRoute as y, invariant as z };
+export { createInlineCssPlaceholderAsset as A, createSieveCache as B, createPlugin as C, isStream as D, fromJSON as E, resolveManifestCssLink as F, isRedirect as G, isDangerousProtocol as H, waitForReason as I, rootRouteId as J, parseRedirect as K, _getRenderedMatches as L, getScriptPreloadAttrs as M, getStylesheetHref as N, toCrossJSONAsync as O, resolveManifestAssetLink as P, executeRewriteInput as R, require_jsx_runtime as S, crossSerializeStream as T, isPromise as U, decodePath as V, dehydrateSsrMatchId as W, notFound as X, isNotFound as Y, require_react as Z, lazyRouteComponent as _, isSsrResponse as a, Link as b, stripSsrResponseBody as c, Scripts as d, HeadContent as f, Outlet as g, createRouter as h, disposeSsrResponse as i, createInlineCssStyleAsset as j, toCrossJSONStream as k, createHydrationScripts as l, RouterProvider as m, bindSsrResponseToRequest as n, normalizeSsrResponse as o, useRouterState as p, redirect as q, defineHandlerCallback as r, replaceSsrResponse as s, renderRouterToStream as t, GLOBAL_TSR as u, createFileRoute as v, createStream as w, useRouter as x, createRootRoute as y, invariant as z };
