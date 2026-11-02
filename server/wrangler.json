@@ -4,7 +4,7 @@
   "vars": {
     "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
     "VITE_GROK_EXTENSIONS": "0",
-    "CONTACT_TO": "no-reply@aegisopstech.me"
+    "CONTACT_TO": "aegisopstech@gmail.com"
   },
   "observability": {
     "enabled": true
