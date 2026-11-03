@@ -1,4 +1,4 @@
-{
+﻿{
   "compatibility_date": "2026-10-01",
   "name": "aegisops-web",
   "vars": {
@@ -19,7 +19,7 @@
   "main": "index.mjs",
   "assets": {
     "binding": "ASSETS",
-    "directory": "..\\public"
+    "directory": "../public"
   },
   "compatibility_flags": [
     "nodejs_compat"
