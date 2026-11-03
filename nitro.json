@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-03T10:40:07.082Z",
+  "date": "2026-11-03T16:29:08.348Z",
   "preset": "cloudflare-module",
   "framework": {
     "name": "nitro",
@@ -21,8 +21,15 @@
         "vars": {
           "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
           "VITE_GROK_EXTENSIONS": "0",
-          "CONTACT_TO": "aegisopstech@gmail.com"
+          "CONTACT_TO": "aegisopstech@gmail.com",
+          "CMS_RESET_TO": "aegisopstech@gmail.com"
         },
+        "kv_namespaces": [
+          {
+            "binding": "CMS_KV",
+            "id": "7816966e55a3447dbf2bf88f46af0556"
+          }
+        ],
         "observability": {
           "enabled": true
         }

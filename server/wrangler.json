@@ -1,18 +1,25 @@
-﻿{
+{
   "compatibility_date": "2026-10-01",
   "name": "aegisops-web",
   "vars": {
     "VITE_PUBLIC_HOSTNAME": "aegisopstech.me",
     "VITE_GROK_EXTENSIONS": "0",
-    "CONTACT_TO": "aegisopstech@gmail.com"
+    "CONTACT_TO": "aegisopstech@gmail.com",
+    "CMS_RESET_TO": "aegisopstech@gmail.com"
   },
+  "kv_namespaces": [
+    {
+      "binding": "CMS_KV",
+      "id": "7816966e55a3447dbf2bf88f46af0556"
+    }
+  ],
   "observability": {
     "enabled": true
   },
   "main": "index.mjs",
   "assets": {
     "binding": "ASSETS",
-    "directory": "../public"
+    "directory": "..\\public"
   },
   "compatibility_flags": [
     "nodejs_compat"
