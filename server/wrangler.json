@@ -19,7 +19,7 @@
   "main": "index.mjs",
   "assets": {
     "binding": "ASSETS",
-    "directory": "..\\public"
+    "directory": "../public"
   },
   "compatibility_flags": [
     "nodejs_compat"
