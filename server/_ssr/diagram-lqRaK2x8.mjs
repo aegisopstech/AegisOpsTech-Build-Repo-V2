@@ -1,7 +1,7 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { h as pattern } from "./site-CFNH31A9.mjs";
 import { S as require_jsx_runtime, Z as require_react } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Shield } from "../_libs/lucide-react.mjs";
+import { o as Shield } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/diagram-lqRaK2x8.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();

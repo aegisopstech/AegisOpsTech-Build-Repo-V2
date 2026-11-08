@@ -173,7 +173,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-Ca5w7ltv.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-BoD3CC_t.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -195,71 +195,99 @@ async function getStartManifest(matchedRoutes) {
 var manifest = {
 	"02ff3a322226b33d03dacb58716e340dd446be4f1380a680db53f1e15c5b242e": {
 		functionName: "cmsUndoImport_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"03376851840497750734e54fb32812ceb1f0292a824f6c9e185ce9e6f0e7e053": {
 		functionName: "cmsSignOutEverywhere_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"039fc4aa7d08f63388d01f6a45c8de649e21a8551f61b43f99204bc394b6d45f": {
 		functionName: "cmsLogin_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"0532ede24d6505dd4e018d416aab3771b91386db558caf0e5595cb6e70af233e": {
+		functionName: "cmsWhatsappClearOutbox_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"0e07f73a707bb1f57016a6cc37efa47acfce2f032becc7dc561ef13acdc4b93c": {
 		functionName: "cmsResetPassword_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"192de2e2ee839cd7b66633c46379dfe257faa21ded3cada65e932c8b1fed9758": {
 		functionName: "cmsRequestReset_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"1e40c1520e954c90a73bc56424878065a4b45490d3b252850e4057d5d378cc07": {
+		functionName: "cmsWhatsappStatus_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"298ad4ff3b19a45d8d7213a1d9026372491ac2d2960d71a6e9cbf14dd1f8d656": {
 		functionName: "getArticleBySlug_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"2d8ab58888b36855d2ad1dc08e4e63a12ed92e8c64665bf97228c8fbb8a927a4": {
 		functionName: "cmsSession_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"32236bfc553857cc6875324accf7f5b015d84e754b87802ec6a07b167720b71b": {
 		functionName: "cmsImport_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"3b5f4c70f3acab549025e0a226fbf6ffd8c4657e57912aa8bedd38b631108a07": {
 		functionName: "getTeamAndFacts_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"3bd77fe6e64998b685c02dcc4fdea93ad6b6bd8c565449a1e574d8ac1b3aacf0": {
 		functionName: "cmsActivity_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"47fded03e66f27cfdb56c5f59ca75ccac7f1134a914f28ea4442a74d46794588": {
 		functionName: "getFaqs_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"4ee2a582b237c91ed4e320f6ae0244e29e98ae63482d8a2cf9151984dc88904f": {
 		functionName: "cmsLogout_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"5da76a4b9467a34499d827ad745fcf2048335a0c1c390eefb9cfa1891920e8cc": {
 		functionName: "cmsLoad_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"61c01d9f0719454acbe876c9158904bb7ed86f6531fe1776dae8f90c99f4a844": {
 		functionName: "cmsChangePassword_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"84140b5ec61054d124470b6d8b4018ac9c9c277b3daafa924241c9ce72145aec": {
+		functionName: "cmsWhatsappCheck_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"8675bbf5843824cc25dd98f8d951b9bf16d1508cbe935facfb969432ced71d0c": {
+		functionName: "cmsWhatsappSave_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"9681a59d11a928f7f349a0d94f5e78d3331ab8c99a15e19fb4188e108e111074": {
+		functionName: "cmsWhatsappSimulate_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
+	},
+	"a69bf7be3b2abf3b69507fad6c537269e4f3a55070d2c387218edc597f1b5fa5": {
+		functionName: "cmsWhatsappSend_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"aa8fdfe33933893dd128448d3ecf0226427bc1e9db5e52ff6afb656b137bb648": {
 		functionName: "sendBrief_createServerFn_handler",
-		importer: () => import("./brief-pMosy4BI.mjs")
+		importer: () => import("./brief-dl_O7VIt.mjs")
+	},
+	"af628e5c52f6c6a9e573e1a3fc2dc2f5c56a325de0189aa4261a15a0011deace": {
+		functionName: "cmsWhatsappOutbox_createServerFn_handler",
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"bf0c9a4a3f2ff5080815fcf444b16ef6ebb55a9d967b4bc91f928f216fe4e52b": {
 		functionName: "cmsSave_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	},
 	"df790591e1a3358abca947266aba29869a07182ce4816ea65b72874b3f875101": {
 		functionName: "getArticleList_createServerFn_handler",
-		importer: () => import("./api-qMv8Z7aT.mjs")
+		importer: () => import("./api-s83bD9Y8.mjs")
 	}
 };
 async function getServerFnById(id, access) {
@@ -1664,7 +1692,7 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-DTokZTcj.mjs").then((n) => n.t),
+		import("./router-DVXqGZr3.mjs").then((n) => n.t),
 		import("./start-5Z2QO8AU.mjs"),
 		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
 	]);

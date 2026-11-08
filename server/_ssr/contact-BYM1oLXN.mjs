@@ -1,7 +1,7 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { d as interestOptions } from "./site-CFNH31A9.mjs";
 import { S as require_jsx_runtime, Z as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { m as Check } from "../_libs/lucide-react.mjs";
+import { _ as Check } from "../_libs/lucide-react.mjs";
 import { r as SiteShell, t as Breadcrumbs } from "./chrome-Bpp8ns_d.mjs";
 import { t as createServerFn } from "./ssr.mjs";
 import { c as string, i as email, s as object, t as _enum } from "../_libs/zod.mjs";

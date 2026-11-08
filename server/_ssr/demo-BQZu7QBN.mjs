@@ -1,6 +1,6 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { S as require_jsx_runtime, Z as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Shield } from "../_libs/lucide-react.mjs";
+import { o as Shield } from "../_libs/lucide-react.mjs";
 import { n as LabelBanner, r as SiteShell, t as Breadcrumbs } from "./chrome-Bpp8ns_d.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/demo-BQZu7QBN.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
